@@ -1,66 +1,16 @@
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
+## Build Merkle Tree
 ```shell
-$ forge build
+$ cd ./web/src
+$ tsc merkle.ts
+$ node merkle.js
 ```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+**You can specify account array in the merkle.ts, and copy merkleRoot and leaf proof value**
+merkleRoot:0xf87436585dda92e60f068d49666b31e910bea9b9e9385921bd0d07160618ed6e
+proof1 [
+  '0xf9aa233456a85a21ada85accfef7bbb64dffdbe4be1274ca24fa29e16d9afae3',
+  '0xe17f99af99f218e88adc6bc0fab014988a7513564bc41cf96651d2c0d4f2050e'
+]
+proof2 [
+  '0x40f9631106fa572bc65e419106bf1344f48c0abb5437c74bbdcde86605ad5bc9',
+  '0xe17f99af99f218e88adc6bc0fab014988a7513564bc41cf96651d2c0d4f2050e'
+]
